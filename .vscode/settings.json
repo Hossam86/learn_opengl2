@@ -1,0 +1,23 @@
+{
+    "cmake.configureArgs": [
+        "-DCPM_SOURCE_CACHE=C:/projects/cpm_cache",
+    ],
+    "clangd.arguments": [
+        "--compile-commands-dir=${workspaceFolder}/build/",
+    ],
+    "terminal.integrated.env.linux": {
+        "DISPLAY": ":90",
+    },
+    "terminal.integrated.env.windows": {
+        "Env:Path": "${workspaceFolder}/bin/Debug:$Env:Path"
+    },
+    "cmake.environment": {
+        "DISPLAY": ":90",
+        "Env:Path": "${workspaceFolder}/bin/Debug:$Env:Path"
+    },
+    "C_Cpp.default.compilerPath": "cl.exe",
+    "files.associations": {
+        "iostream": "cpp"
+    },
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+}

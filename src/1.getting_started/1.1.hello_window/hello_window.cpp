@@ -18,9 +18,10 @@ main()
 	glfwInitHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
 	// create a window
-	GLFWwindow* winodw = glfwCreateWindow(800, 600, "GLFW Window", nullptr, nullptr);
+	GLFWwindow* window = glfwCreateWindow(800, 600, "GLFW Window", nullptr, nullptr);
+
 	// check if window is created successfully
-	if (winodw == nullptr)
+	if (window == nullptr)
 	{
 		std::cerr << "Failed to create GLFW window" << std::endl;
 		return -1;
@@ -29,11 +30,11 @@ main()
 	// loop until the user closes the window
 	while (!glfwWindowShouldClose(window))
 	{
-		glfwSwapBuffers(winodw);
+		glfwSwapBuffers(window);
 		glfwPollEvents();
 	}
 
-	// release resources
+	// release glfw resources
 	glfwTerminate();
 	return 0;
 }
